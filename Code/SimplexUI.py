@@ -42,6 +42,7 @@ class InitialTableThingEntry(Frame):
         self.setSetUpHeadings(normal_vars, slack_vars)
         self.setUpValEntries(normal_vars, slack_vars)
 
+
     def setSetUpHeadings(self, normal_vars: int, slack_vars: int):
         for var_number in range(1, normal_vars + 1):
             current_var_entry = Entry(self, borderwidth=1, relief="solid")
@@ -279,7 +280,7 @@ class SolutionTables(Frame):
     def __init__(self, master, table: Simplex, variable_names: list):
         super().__init__(master)
         for column in range(0, 1): self.columnconfigure(column, weight=1)
-        # for row in range(0, len(variable_names)): self.rowconfigure(row, weight=1)
+        for row in range(0, len(variable_names)): self.rowconfigure(row, weight=1)
         self.table: Simplex = table
         self.variable_names: list = variable_names
         # set up UI:
@@ -300,7 +301,7 @@ class SolutionTables(Frame):
     def setUpNextTable(self):
         self.current_table_widget = TableSolutionShow(self.tables_frame, self.table, self.variable_names)
         self.hideAnswer()
-        self.current_table_widget.pack()
+        self.current_table_widget.pack(padx=5, pady=5, expand=True, fill="both")
         self.show_answer_button.reset()
 
     def finished(self):
