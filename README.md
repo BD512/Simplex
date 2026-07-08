@@ -1,4 +1,4 @@
-App for practising simplex
+App for practising simplex \n
 Notes:
 - To type a value as a result of dividing by 0, type "undefined" or "inf"
 - Can only do simplex with <= inequalities at the moment but maybe I'll change this later
