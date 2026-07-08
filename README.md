@@ -1,4 +1,4 @@
-App for practising simplex
+Software for practising simplex
 
 
 Notes:
