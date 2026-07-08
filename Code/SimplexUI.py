@@ -27,9 +27,6 @@ class LinkedEntry:
     def getLabelEntry(self):
         return self.variable_show
 
-
-
-
 class InitialTableThingEntry(Frame):
     def __init__(self, master, normal_vars: int, slack_vars: int):
         super().__init__(master)
@@ -204,7 +201,7 @@ class TableRowWidgets:
 class TableSolutionShow(Frame):
     def __init__(self, master, table: Simplex, variable_names: list):
         super().__init__(master)
-        for column in range(0, len(variable_names)+4): self.columnconfigure(column, weight=1)
+        for column in range(0, len(variable_names)+4): self.columnconfigure(column, weight=1, minsize=15)
         for row in range(0, len(variable_names) + 1): self.rowconfigure(row, weight=1)
         self.table_thing: Simplex = table
         self.variable_names = variable_names
@@ -476,5 +473,3 @@ Button(a, text="solve", command=solve).pack()
 a.mainloop()
 """
 # todo fix problem that occuring with example bc of negative and *0 for theta value text but at wrong time
-
-
