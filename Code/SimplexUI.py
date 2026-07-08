@@ -2,7 +2,7 @@ from tkinter import Tk, Frame, Label, Button, Entry, END, Spinbox, StringVar, Ca
 from SimplexAlgorithm import Simplex, TableThingRow, SimplexTerminalUI, ObjectiveRow
 from fractions import Fraction
 
-# if anyone reads this, know I am aware of how messy and inefficient this whole code is ass I rushed some of it but it works
+# if anyone reads this, know I am aware of how messy and inefficient this whole code is as I rushed some of it but it works
 
 class LinkedEntry:
     def __init__(self, parent):
