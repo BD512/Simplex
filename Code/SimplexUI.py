@@ -2,8 +2,6 @@ from tkinter import Tk, Frame, Label, Button, Entry, END, Spinbox, StringVar, Ca
 from SimplexAlgorithm import Simplex, TableThingRow, SimplexTerminalUI, ObjectiveRow
 from fractions import Fraction
 
-# if anyone reads this, know I am aware of how messy and inefficient this whole code is as I rushed some of it but it works
-
 class LinkedEntry:
     def __init__(self, parent):
         self.parent = parent
@@ -473,3 +471,5 @@ Button(a, text="solve", command=solve).pack()
 a.mainloop()
 """
 # todo fix problem that occuring with example bc of negative and *0 for theta value text but at wrong time
+
+# if anyone reads this, know I am aware of how messy and inefficient this whole code is as I rushed some of it but it works
